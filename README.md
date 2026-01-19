@@ -40,7 +40,8 @@ O repositório é híbrido, contendo notas e código:
 ## Tecnologias usadas até agora:
 
 - **Java 25 LTS**
-- **Maven** (Migração para Gradle planejada)
+- **Maven**
+- **Gradle**
 - **JUnit 5**
 - **IntelliJ IDEA**
 - **Git/GitHub**
