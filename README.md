@@ -34,7 +34,7 @@ O repositório é híbrido, contendo notas e código:
   - `fundamentos.io`: Manipulação de Arquivos (IO vs NIO vs NIO.2).
   - `fundamentos.streams`: Processamento funcional de dados.
   - `fundamentos.excecoes`: Tratamento de erros e exceções de negócio.
-  - Códigos avançados de graddle para redes 
+  - Códigos avançados de graddle para redes com `java.net.http.HttpClient`, Sockets TCP, `HttpServer`
 
 ---
 
@@ -43,7 +43,7 @@ O repositório é híbrido, contendo notas e código:
 🛠️ Tecnologias
 
 <div align="left">
-  <img src="https://img.shields.io/badge/Java-21%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Java-25%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
   <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" />
   <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" />
