@@ -1,31 +1,22 @@
-# --- JAVA & MAVEN ---
-target/
-pom.xml.tag
-pom.xml.releaseBackup
-pom.xml.versionsBackup
-pom.xml.next
-release.properties
-dependency-reduced-pom.xml
-buildNumber.properties
-.mvn/timing.properties
-.mvn/wrapper/maven-wrapper.jar
-**/*.class
-
-# --- INTELLIJ IDEA ---
+# IDEs
 .idea/
-*.iws
 *.iml
-*.ipr
-out/
-
-# --- SISTEMA (Arch/Linux/Mac) ---
+.vscode/
 .DS_Store
-.fuse_hidden*
-.directory
-.Trash-*
-*.swp
 
-# --- OBSIDIAN ---
-.obsidian/workspace.json
-.obsidian/graph.json
-.obsidian/appearance.json
+# Obsidian
+.obsidian/workspace
+.obsidian/cache
+
+# Java / Maven
+target/
+*.class
+*.log
+
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Dados gerados
+*.json
