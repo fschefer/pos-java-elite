@@ -24,27 +24,23 @@ Repositório central de estudos (**Knowledge Base**) e implementações prática
 
 ## 📂 Estrutura do Monorepo
 
-O projeto foi reestruturado para separar documentação de código executável:
+## Estrutura do Projeto
 
-### 📘 `notas-de-aula/` (Knowledge Base)
-Base de conhecimento em formato **Obsidian/Markdown**, contendo a teoria detalhada, diagramas e conceitos.
-- Fundamentos de OO e Engenharia de Software.
-- Aprofundamento em JVM e Bytecode.
-- Detalhes de Protocolos (HTTP/TCP).
+O repositório é híbrido, contendo notas e código:
 
-### 🧪 `labs/` (Projetos Práticos)
-Laboratórios de código onde a teoria é aplicada.
+- **`notas-de-aula/`**: Notas de estudo detalhadas (formato Obsidian).
 
-* **`java-fundamentos/`** (Maven)
-    * O Core do Java: Streams, Lambdas, Optional, Reflection e I/O (NIO.2).
-    * Tratamento robusto de Exceções de Negócio.
+- **`labs/java-fundamentos/`**: Código fonte prático do módulo Core (Maven).
+  - `fundamentos.oo`: Abstração, Encapsulamento, Herança, Polimorfismo.
+  - `fundamentos.colecoes`: Performance de List, Set e Map.
+  - `fundamentos.apis`: Uso de Optional, Date/Time, Reflection e Regex.
+  - `fundamentos.io`: Manipulação de Arquivos (IO vs NIO vs NIO.2).
+  - `fundamentos.streams`: Processamento funcional de dados.
+  - `fundamentos.excecoes`: Tratamento de erros e exceções de negócio.
 
-* **`java-advanced/`** (Gradle)
-    * **Build Tools:** Automação e gestão de dependências com Gradle (Groovy DSL).
-    * **Collections Deep Dive:** Implementações de alta performance (`WeakHashMap`, `IdentityHashMap`, `EnumSet`).
-    * **Networking:** Criação de Servidores HTTP (Nativo e Sockets TCP Raw) e Clientes (`HttpClient` Java 11+).
-    * **Serialization:** Manipulação de JSON com Google Gson e Java Records.
-
+- **`labs/java-advanced/`**: Código fonte avançado (Gradle).
+  - `mx.florinda.cardapio`: Imutabilidade com Records, Enums e Deep Dive em Collections (`WeakHashMap`, `IdentityHashMap`).
+  - `mx.florinda.networking`: Serialização JSON (Gson), Cliente HTTP (`java.net.http`), Servidores Web e Sockets TCP "na unha".
 ---
 
 ## 🛠️ Tecnologias & Stack
