@@ -34,17 +34,23 @@ O repositório é híbrido, contendo notas e código:
   - `fundamentos.io`: Manipulação de Arquivos (IO vs NIO vs NIO.2).
   - `fundamentos.streams`: Processamento funcional de dados.
   - `fundamentos.excecoes`: Tratamento de erros e exceções de negócio.
+  - Códigos avançados de graddle para redes 
 
 ---
 
 ## Tecnologias usadas até agora:
 
-- **Java 25 LTS**
-- **Maven**
-- **Gradle**
-- **JUnit 5**
-- **IntelliJ IDEA**
-- **Git/GitHub**
+🛠️ Tecnologias
+
+<div align="left">
+  <img src="https://img.shields.io/badge/Java-21%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" />
+  <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gson-Library-4285F4?style=for-the-badge&logo=google&logoColor=white" />
+  <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white" />
+  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" />
+</div>
 
 ---
 *Desenvolvido por Flávio Schefer.*
