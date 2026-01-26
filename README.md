@@ -12,7 +12,7 @@ Repositório central de estudos (**Knowledge Base**) e implementações prática
 | Módulo | Temas Principais | Status |
 | :--- | :--- | :--- |
 | **01. Fundamentos (Core)** | OO, Collections, Streams, I/O, Exceptions | ✅ **Concluído** |
-| **01. Fundamentos (Advanced)** | Gradle, Deep Dive Collections, Networking, HTTP | 🔄 **Em andamento** |
+| **01. Fundamentos (Advanced)** | Gradle, Deep Dive Collections, Networking, HTTP | ✅ **Concluído** |
 | **02. Back-End + IA** | Spring Boot, Quarkus, APIs REST, LangChain4j | 🔒 *Aguardando* |
 | **03. Front-End** | React, Integração com APIs | 🔒 *Aguardando* |
 | **04. Arquitetura** | Clean Arch, Event-Driven, DDD, System Design | 🔒 *Aguardando* |
