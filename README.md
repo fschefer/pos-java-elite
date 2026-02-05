@@ -42,14 +42,12 @@ O repositório é híbrido, contendo notas e código:
   - `mx.florinda.cardapio`: Imutabilidade com Records, Enums e Deep Dive em Collections (`WeakHashMap`, `IdentityHashMap`).
   - `mx.florinda.networking`: Serialização JSON (Gson), Cliente HTTP (`java.net.http`), Servidores Web e Sockets TCP "na unha".
 
-- **`labs/quarkus-intro/`**: Desenvolvimento Cloud Native e Microsserviços (Maven). 
-- ` APIs RESTful imperativas e reativas (`UnipdsResource`) e integração via REST Client (`StarWarsService`). - `
-
- - Padrões de Tolerância a Falhas como Circuit Breaker, Timeout e Fallback aplicados em integrações externas (`StarWarsResource`). - 
- 
-  - Monitoramento com Health Checks (`LivenessCheck`, `ReadinessCheck`) e Métricas de Negócio com Micrometer (`@Counted`). 
-  - Persistência simplificada com Hibernate Panache (Active Record), Entidades (`Pessoa`) e Recursos Transacionais (`PessoaResource`). 
--   Implementação de Segurança com JWT e RBAC (`SecurityResource`), protegendo endpoints por papéis (`@RolesAllowed`).
+- **`labs/quarkus-intro/`**: Desenvolvimento Cloud Native e Microsserviços (Maven).
+  - `APIs`: APIs RESTful imperativas e reativas (`UnipdsResource`) e integração via REST Client (`StarWarsService`).
+  - `Resiliência`: Padrões de Tolerância a Falhas como Circuit Breaker, Timeout e Fallback aplicados em integrações externas (`StarWarsResource`).
+  - `Observabilidade`: Monitoramento com Health Checks (`LivenessCheck`, `ReadinessCheck`) e Métricas de Negócio com Micrometer (`@Counted`).
+  - `Persistência`: Persistência simplificada com Hibernate Panache (Active Record), Entidades (`Pessoa`) e Recursos Transacionais (`PessoaResource`).
+  - `Segurança`: Implementação de Segurança com JWT e RBAC (`SecurityResource`), protegendo endpoints por papéis (`@RolesAllowed`)..
 ---
 
 ## 🛠️ Tecnologias & Stack
