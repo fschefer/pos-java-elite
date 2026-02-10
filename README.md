@@ -66,10 +66,10 @@ O repositório é híbrido, contendo notas e código:
 
 ## 🛠️ Tecnologias & Stack
 
-<div align="left">
+  <div align="left">
   <img src="https://img.shields.io/badge/Java-25%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
   <img src="https://img.shields.io/badge/Quarkus-4695EB?style=for-the-badge&logo=quarkus&logoColor=white" />
-  <img src="https://img.shields.io/badge/Spring_Boot_4-6DB33F?style=for-the-badge&logo=springboot&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Boot_4-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
   <img src="https://img.shields.io/badge/GraalVM-E95420?style=for-the-badge&logo=graalvm&logoColor=white" />
   <br />
   
