@@ -48,11 +48,41 @@ O repositório é híbrido, contendo notas e código:
   - `Observabilidade`: Monitoramento com Health Checks (`LivenessCheck`, `ReadinessCheck`) e Métricas de Negócio com Micrometer (`@Counted`).
   - `Persistência`: Persistência simplificada com Hibernate Panache (Active Record), Entidades (`Pessoa`) e Recursos Transacionais (`PessoaResource`).
   - `Segurança`: Implementação de Segurança com JWT e RBAC (`SecurityResource`), protegendo endpoints por papéis (`@RolesAllowed`)..
+  
+  - **`labs/springboot-intro/`** (Maven - Spring Boot 4 & Java 25):
+  - **Domínio**: API REST para Gestão de Eventos e Inscrições.
+  - **Modelagem ORM Avançada** (`br.com.unipds.evento.model`):
+    - Entidades relacionais: `User`, `Conference`, `Session`.
+    - Relacionamento N:N com atributos extras: Entidade associativa `Subscription` utilizando `@EmbeddedId` e chave composta `SubscriptionId`.
+  - **Arquitetura em Camadas**:
+    - `repository`: Interfaces `ListCrudRepository` para persistência (MySQL/H2).
+    - `service`: Regras de negócio (geração de UUID, auditoria de datas) em `SubscriptionService` e orquestração em `SessionService`.
+    - `controller`: Exposição de endpoints REST e injeção de dependências.
+  - **Qualidade & Docs**:
+    - Tratamento global de erros com `@ControllerAdvice` (`GlobalExceptionHandler`).
+    - Documentação automática com **SpringDoc OpenAPI (Swagger)**.
+    - Testes de Integração com `@WebMvcTest` e Mockito.
 ---
 
 ## 🛠️ Tecnologias & Stack
 
-<div align="left"> <img src="https://img.shields.io/badge/Java-25%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" /> <img src="https://img.shields.io/badge/Quarkus-4695EB?style=for-the-badge&logo=quarkus&logoColor=white" /> <img src="https://img.shields.io/badge/Spring_Boot-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" /> <img src="https://img.shields.io/badge/GraalVM-E95420?style=for-the-badge&logo=graalvm&logoColor=white" /> <br /> <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" /> <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" /> <br /> <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" /> <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" /> <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" /> <br /> <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white" /> <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" /> </div>
-
+<div align="left">
+  <img src="https://img.shields.io/badge/Java-25%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+  <img src="https://img.shields.io/badge/Quarkus-4695EB?style=for-the-badge&logo=quarkus&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_Boot_4-6DB33F?style=for-the-badge&logo=spring-boot&logoColor=white" />
+  <img src="https://img.shields.io/badge/GraalVM-E95420?style=for-the-badge&logo=graalvm&logoColor=white" />
+  <br />
+  
+  <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" />
+  <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" />
+  <br />
+  
+  <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" />
+  <img src="https://img.shields.io/badge/Mockito-Save-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white" />
+  <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" />
+</div>
 ---
 *Desenvolvido por Flávio Schefer.*
