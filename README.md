@@ -11,22 +11,20 @@ Repositório central de estudos (**Knowledge Base**) e implementações prática
 
 | Módulo                         | Temas Principais                                | Status          |
 | :----------------------------- | :---------------------------------------------- | :-------------- |
-| **01. Fundamentos (Core)**     | OO, Collections, Streams, I/O, Exceptions       | ✅ **Concluído** |
+| **01. Fundamentos (Core)** | OO, Collections, Streams, I/O, Exceptions       | ✅ **Concluído** |
 | **01. Fundamentos (Advanced)** | Gradle, Deep Dive Collections, Networking, HTTP | ✅ **Concluído** |
-| **02. Back-End + IA**          | Spring Boot, Quarkus, APIs REST, LangChain4j    |  *Em andamento* |
-| **03. Front-End**              | React, Integração com APIs                      | 🔒 *Aguardando* |
-| **04. Arquitetura**            | Clean Arch, Event-Driven, DDD, System Design    | 🔒 *Aguardando* |
-| **05. Infra & Cloud**          | Docker, Kubernetes, AWS, CI/CD                  | 🔒 *Aguardando* |
-| **06. Persistência**           | SQL, NoSQL (Redis/Mongo), JPA                   | 🔒 *Aguardando* |
-| **07. Qualidade**              | TDD, Testes de Integração, Benchmarking         | 🔒 *Aguardando* |
+| **02. Back-End + IA** | Spring Boot, Quarkus, APIs REST, LangChain4j    | 🚧 *Em andamento*|
+| **03. Front-End** | React, Integração com APIs                      | 🔒 *Aguardando* |
+| **04. Arquitetura** | Clean Arch, Event-Driven, DDD, System Design    | 🔒 *Aguardando* |
+| **05. Infra & Cloud** | Docker, Kubernetes, AWS, CI/CD                  | 🔒 *Aguardando* |
+| **06. Persistência** | SQL, NoSQL (Redis/Mongo), JPA                   | 🔒 *Aguardando* |
+| **07. Qualidade** | TDD, Testes de Integração, Benchmarking         | 🔒 *Aguardando* |
 
 ---
 
 ## 📂 Estrutura do Monorepo
 
-## Estrutura do Projeto
-
-O repositório é híbrido, contendo notas e código:
+O repositório é híbrido, contendo notas teóricas e laboratórios de código prático:
 
 - **`notas-de-aula/`**: Notas de estudo detalhadas (formato Obsidian).
 
@@ -47,42 +45,60 @@ O repositório é híbrido, contendo notas e código:
   - `Resiliência`: Padrões de Tolerância a Falhas como Circuit Breaker, Timeout e Fallback aplicados em integrações externas (`StarWarsResource`).
   - `Observabilidade`: Monitoramento com Health Checks (`LivenessCheck`, `ReadinessCheck`) e Métricas de Negócio com Micrometer (`@Counted`).
   - `Persistência`: Persistência simplificada com Hibernate Panache (Active Record), Entidades (`Pessoa`) e Recursos Transacionais (`PessoaResource`).
-  - `Segurança`: Implementação de Segurança com JWT e RBAC (`SecurityResource`), protegendo endpoints por papéis (`@RolesAllowed`)..
+  - `Segurança`: Implementação de Segurança com JWT e RBAC (`SecurityResource`), protegendo endpoints por papéis (`@RolesAllowed`).
   
-  - **`labs/springboot-intro/`** (Maven - Spring Boot 4 & Java 25):
+- **`labs/springboot-intro/`**: Introdução e Arquitetura Base (Maven).
   - **Domínio**: API REST para Gestão de Eventos e Inscrições.
-  - **Modelagem ORM Avançada** (`br.com.unipds.evento.model`):
-    - Entidades relacionais: `User`, `Conference`, `Session`.
-    - Relacionamento N:N com atributos extras: Entidade associativa `Subscription` utilizando `@EmbeddedId` e chave composta `SubscriptionId`.
-  - **Arquitetura em Camadas**:
-    - `repository`: Interfaces `ListCrudRepository` para persistência (MySQL/H2).
-    - `service`: Regras de negócio (geração de UUID, auditoria de datas) em `SubscriptionService` e orquestração em `SessionService`.
-    - `controller`: Exposição de endpoints REST e injeção de dependências.
-  - **Qualidade & Docs**:
-    - Tratamento global de erros com `@ControllerAdvice` (`GlobalExceptionHandler`).
-    - Documentação automática com **SpringDoc OpenAPI (Swagger)**.
-    - Testes de Integração com `@WebMvcTest` e Mockito.
+  - **Modelagem ORM Avançada**: Relacionamentos N:N com atributos extras (`@EmbeddedId` e classe associativa `Subscription`).
+  - **Arquitetura em Camadas**: Repositórios (`ListCrudRepository`), Serviços e Controladores.
+  - **Qualidade & Docs**: Tratamento global de erros (`@ControllerAdvice`), Documentação (SpringDoc OpenAPI/Swagger) e Testes com `@WebMvcTest`.
+
+- **`labs/bank-transfer/`**: Gestão Transacional e Propriedades ACID (Maven).
+  - **Domínio**: Sistema de Transferência Bancária entre Contas.
+  - **Controle Transacional**: Uso da anotação `@Transactional` para garantir a integridade dos dados (Atomicidade, Consistência, Isolamento e Durabilidade).
+  - **Rollback Automático**: Simulação de reversão de dados em falhas de negócio (ex: saldo insuficiente).
+  - **Persistência Física**: Configuração do H2 em modo arquivo (`file`) para testar a Durabilidade.
+
+- **`labs/auth-api/`**: Segurança, Autenticação e Autorização (Maven).
+  - **Domínio**: API Stateless Segura com Spring Security.
+  - **Criptografia**: Proteção de senhas na base de dados utilizando o algoritmo `BCryptPasswordEncoder`.
+  - **JWT (JSON Web Token)**: Geração, assinatura e decodificação de tokens utilizando a biblioteca `JJWT`.
+  - **Filtros Customizados**: Interceção de requisições com `OncePerRequestFilter` e injeção de permissões no `SecurityContextHolder`.
+
+- **`labs/reactive.config/`**: Programação Reativa e Integrações Assíncronas (Maven).
+  - **Domínio**: API de Autorização de Documentos Fiscais.
+  - **Spring WebFlux**: Transição do modelo bloqueante para o modelo reativo utilizando `Mono` e `Flux`.
+  - **WebClient**: Consumo assíncrono e não-bloqueante de APIs externas com alta latência (Slow APIs).
+  - **Testes Reativos**: Validação fluida de fluxos com o `WebTestClient` e `@WebFluxTest`.
+
 ---
 
 ## 🛠️ Tecnologias & Stack
 
-  <div align="left">
-  <img src="https://img.shields.io/badge/Java-25%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
-  <img src="https://img.shields.io/badge/Quarkus-4695EB?style=for-the-badge&logo=quarkus&logoColor=white" />
-  <img src="https://img.shields.io/badge/Spring_Boot_4-6DB33F?style=for-the-badge&logo=spring&logoColor=white&v=2" />
-  <img src="https://img.shields.io/badge/GraalVM-E95420?style=for-the-badge&logo=graalvm&logoColor=white" />
+<div align="left">
+  <img src="https://img.shields.io/badge/Java-21%20/%2025%20LTS-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" />
+<img src="https://img.shields.io/badge/Spring_Boot_3.4+-6DB33F?style=for-the-badge&logo=spring&logoColor=white&v=2" />  
+<img src="https://img.shields.io/badge/Quarkus-4695EB?style=for-the-badge&logo=quarkus&logoColor=white" />
   <br />
-  
+
+  <img src="https://img.shields.io/badge/Spring_Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white" />
+  <img src="https://img.shields.io/badge/Spring_WebFlux-6DB33F?style=for-the-badge&logo=spring&logoColor=white" />
+  <img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" />
+  <br />
+
   <img src="https://img.shields.io/badge/Hibernate-59666C?style=for-the-badge&logo=hibernate&logoColor=white" />
-  <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" />
-  <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
-  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/H2_Database-2A475E?style=for-the-badge&logo=sqlite&logoColor=white" />
   <br />
-  
+
+  <img src="https://img.shields.io/badge/Maven-C71A36?style=for-the-badge&logo=apache-maven&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gradle-02303A?style=for-the-badge&logo=gradle&logoColor=white" />
   <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" />
-  <img src="https://img.shields.io/badge/Mockito-788BD2?style=for-the-badge&logo=mockito&logoColor=white" />
-  <img src="https://img.shields.io/badge/IntelliJ_IDEA-000000?style=for-the-badge&logo=intellij-idea&logoColor=white" />
+  <br />
+
+  <img src="https://img.shields.io/badge/OpenTelemetry-000000?style=for-the-badge&logo=opentelemetry&logoColor=white" />
   <img src="https://img.shields.io/badge/Arch_Linux-1793D1?style=for-the-badge&logo=arch-linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Mockito-788BD2?style=for-the-badge&logo=mockito&logoColor=white" />
 </div>
 ---
 *Desenvolvido por Flávio Schefer.*
