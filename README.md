@@ -13,12 +13,11 @@ Repositório central de estudos (**Knowledge Base**) e implementações prática
 | :----------------------------- | :---------------------------------------------- | :-------------- |
 | **01. Fundamentos (Core)** | OO, Collections, Streams, I/O, Exceptions       | ✅ **Concluído** |
 | **01. Fundamentos (Advanced)** | Gradle, Deep Dive Collections, Networking, HTTP | ✅ **Concluído** |
-| **02. Back-End + IA** | Spring Boot, Quarkus, APIs REST, LangChain4j    | 🚧 *Em andamento*|
-| **03. Front-End** | React, Integração com APIs                      | 🔒 *Aguardando* |
-| **04. Arquitetura** | Clean Arch, Event-Driven, DDD, System Design    | 🔒 *Aguardando* |
-| **05. Infra & Cloud** | Docker, Kubernetes, AWS, CI/CD                  | 🔒 *Aguardando* |
-| **06. Persistência** | SQL, NoSQL (Redis/Mongo), JPA                   | 🔒 *Aguardando* |
-| **07. Qualidade** | TDD, Testes de Integração, Benchmarking         | 🔒 *Aguardando* |
+| **02. Back-End** | Spring Boot, Quarkus, APIs REST    | ✅ **Concluído**|
+| **03. Arquitetura** | Clean Arch, Event-Driven, DDD, System Design    | 🔒 *Aguardando* |
+| **04. Infra & Cloud** | Docker, Kubernetes, AWS, CI/CD                  | 🔒 *Aguardando* |
+| **05. Persistência** | SQL, NoSQL (Redis/Mongo), JPA                   | 🔒 *Aguardando* |
+| **06. Qualidade** | TDD, Testes de Integração, Benchmarking         | 🔒 *Aguardando* |
 
 ---
 
